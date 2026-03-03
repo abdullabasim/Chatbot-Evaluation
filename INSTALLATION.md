@@ -11,8 +11,7 @@
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate       # macOS / Linux
-# .venv\Scripts\activate        # Windows
+source .venv/bin/activate  
 ```
 
 ---
@@ -35,11 +34,19 @@ This installs:
 
 ## 3. Download the spaCy language model
 
+The evaluator uses spaCy for lemmatization during Stage 1 keyword matching. Download the language model that matches your configured `EVAL_LANGUAGE` (default is English).
+
+For **English** (`EVAL_LANGUAGE=en`):
 ```bash
 python -m spacy download en_core_web_sm
 ```
 
-This model is used by the evaluator for Stage 1 (lemma-based keyword matching).
+If you configure the evaluator to test in another language (e.g., German `EVAL_LANGUAGE=de`), you can download the respective model directly:
+```bash
+python -m spacy download de_core_news_sm
+```
+
+*(Note: If the evaluator runs and detects that the required model is missing, it will attempt to automatically download it for you, but it is best practice to install it upfront!)*
 
 ---
 
@@ -69,6 +76,22 @@ EVAL_LANGUAGE=en                      # spacy language lemma target
 EVAL_MAX_CONCURRENCY=20               # parallel test conversations
 EVAL_REQUEST_TIMEOUT=10.0             # per-request timeout in seconds
 EVAL_LOG_LEVEL=WARNING                # DEBUG / INFO / WARNING / ERROR
+```
+
+**`mock_api/.env` options:**
+
+```env
+MOCK_API_HOST=0.0.0.0                 # host to bind the API to
+MOCK_API_PORT=8080                    # port to bind the API to
+MOCK_WORKERS=1                        # number of uvicorn workers for concurrency
+MOCK_HALLUCINATION_RATE=0.05          # probability (0.0-1.0) of a wrong answer
+MOCK_MIN_LATENCY_MS=200               # minimum simulated LLM reply latency
+MOCK_MAX_LATENCY_MS=800               # maximum simulated LLM reply latency
+MOCK_CONFIDENCE_MIN=0.72              # minimum confidence for correct answers
+MOCK_CONFIDENCE_MAX=0.99              # maximum confidence for correct answers
+MOCK_HALLUCINATION_CONFIDENCE_MIN=0.10 # min confidence for hallucinated answers
+MOCK_HALLUCINATION_CONFIDENCE_MAX=0.45 # max confidence for hallucinated answers
+MOCK_LOG_LEVEL=INFO                   # logging verbosity
 ```
 
 ---
