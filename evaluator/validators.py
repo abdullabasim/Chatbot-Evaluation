@@ -11,12 +11,12 @@ Keyword coverage check — two-stage per-keyword logic:
       Lemmatise both the keyword and every token in the response.
       "fees" → "fee"  |  "enrolling" → "enroll"  |  "counseling" → "counsel"
 
-      If the keyword's lemma is found among the response lemmas → ✅ covered.
+      If the keyword's lemma is found among the response lemmas →  covered.
       The neural model is NOT invoked.
 
   Stage 2 — Semantic similarity fallback (only if Stage 1 failed)
       Encode the response and the keyword with a sentence-transformer and
-      compute cosine similarity. If score >= semantic_threshold → ✅ covered.
+      compute cosine similarity. If score >= semantic_threshold →  covered.
 
   Final verdict per keyword:
       covered = lemma_match OR semantic_match
@@ -216,11 +216,11 @@ class ResponseQualityAssessor:
 
     Stage 1 — spaCy lemmatized exact match:
       Lemmatise the keyword and every token in the response.
-      If the keyword lemma appears → covered ✅  (no neural model needed).
+      If the keyword lemma appears → covered   (no neural model needed).
 
     Stage 2 — Semantic fallback (only if Stage 1 failed):
       Compute cosine similarity between sentence-transformer embeddings.
-      If score >= semantic_threshold → covered ✅.
+      If score >= semantic_threshold → covered .
 
     Pass/Fail verdict:
       A turn PASSES if ANY keyword is covered (lemma or semantic match).
@@ -397,59 +397,6 @@ class ResponseQualityAssessor:
             self.assess(r, keywords, semantic_threshold, coverage_threshold)
             for r in responses
         ]
-
-
-
-    def explain(self, report: QualityReport) -> str:
-        W = 82
-        pct = round(report.coverage_rate * 100)
-        verdict = "✅ PASS" if report.response_passed else "❌ FAIL"
-        lines = [
-            "─" * W,
-            f'  Response : "{report.response[:76]}{"..." if len(report.response) > 76 else ""}"',
-            f"  Coverage : {len(report.covered_keywords)}/{len(report.keyword_results)} "
-            f"({pct}%)  [{verdict}]  |  {report.elapsed_ms:.1f}ms",
-            "",
-            f"  {'Keyword':<14} {'Lemma':<14} {'Stage 1 (spaCy)':^17} {'Stage 2 (sem)':^13} {'Score':^7} Result    Reason",
-            f"  {'─'*14} {'─'*14} {'─'*17} {'─'*13} {'─'*7} {'─'*8}  {'─'*13}",
-        ]
-        for r in report.keyword_results:
-            stage1 = f"✅ ({r.matched_word})" if r.lemma_match else "❌"
-            stage2 = "─ (skipped)" if r.lemma_match else ("✅" if r.semantic_match else "❌")
-            score  = "  ─  " if r.lemma_match else f"{r.semantic_score:.3f}"
-            result = "✅ PASS" if r.covered else "❌ FAIL"
-            reason = {
-                "lemma":    "spaCy lemma",
-                "semantic": "semantic",
-                "none":     "no match",
-            }[r.match_reason]
-            lines.append(
-                f"  {r.keyword:<14} {r.keyword_lemma:<14} {stage1:<17} {stage2:<13} "
-                f"{score:^7} {result:<8}  {reason}"
-            )
-        if report.missing_keywords:
-            lines.append(f"\n  ⚠  Missing : {', '.join(report.missing_keywords)}")
-        lines.append("─" * W)
-        return "\n".join(lines)
-
-    def explain_batch(self, reports: list[QualityReport]) -> str:
-        import numpy as np
-        W = 78
-        lines = [
-            "═" * W,
-            f"  BATCH SUMMARY — {len(reports)} responses",
-            f"  {'#':<4} {'Coverage':<10} {'Pass?':<8} {'Covered':<26} Preview",
-            f"  {'─'*4} {'─'*10} {'─'*8} {'─'*26} {'─'*22}",
-        ]
-        for i, r in enumerate(reports, 1):
-            pct     = f"{round(r.coverage_rate * 100)}%"
-            verdict = "✅" if r.response_passed else "❌"
-            covered = ", ".join(r.covered_keywords) or "none"
-            preview = r.response[:28] + ("..." if len(r.response) > 28 else "")
-            lines.append(f"  {i:<4} {pct:<10} {verdict:<8} {covered:<26} \"{preview}\"")
-        avg = round(np.mean([r.coverage_rate for r in reports]) * 100)
-        lines += [f"  {'─'*4} {'─'*10}", f"  AVG  {avg}%", "═" * W]
-        return "\n".join(lines)
 
 
 # Singleton factory
