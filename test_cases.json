@@ -1,0 +1,689 @@
+[
+  {
+    "test_id": "testCase-001",
+    "conversation": [
+      {
+        "user_id": "user-001",
+        "message": "I want to know about tuition fees at Chatbot."
+      },
+      {
+        "user_id": "user-001",
+        "message": "How much does a program cost per semester?"
+      }
+    ],
+    "expected_intents": [
+      "tuition_inquiry",
+      "tuition_inquiry"
+    ],
+    "expected_response_keywords": [
+      [
+        "tuition",
+        "fee",
+        "program",
+        "semester",
+        "payment"
+      ],
+      [
+        "cost",
+        "semester",
+        "program",
+        "fee",
+        "tuition"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-002",
+    "conversation": [
+      {
+        "user_id": "user-002",
+        "message": "How do I enroll at Chatbot?"
+      },
+      {
+        "user_id": "user-002",
+        "message": "What documents do I need to apply?"
+      },
+      {
+        "user_id": "user-002",
+        "message": "How long does the admission process take?"
+      }
+    ],
+    "expected_intents": [
+      "enrollment_inquiry",
+      "enrollment_inquiry",
+      "enrollment_inquiry"
+    ],
+    "expected_response_keywords": [
+      [
+        "enroll",
+        "apply",
+        "process",
+        "week",
+        "school"
+      ],
+      [
+        "documents",
+        "apply",
+        "upload",
+        "certificate",
+        "program"
+      ],
+      [
+        "process",
+        "week",
+        "enroll",
+        "application",
+        "admission"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-003",
+    "conversation": [
+      {
+        "user_id": "user-003",
+        "message": "What Bachelor programs does Chatbot offer?"
+      },
+      {
+        "user_id": "user-003",
+        "message": "What programs and courses can I study at Chatbot?"
+      },
+      {
+        "user_id": "user-003",
+        "message": "Are Chatbot programs offered in an online format?"
+      }
+    ],
+    "expected_intents": [
+      "course_inquiry",
+      "course_inquiry",
+      "course_inquiry"
+    ],
+    "expected_response_keywords": [
+      [
+        "program",
+        "business",
+        "science",
+        "accredited",
+        "chatbot"
+      ],
+      [
+        "program",
+        "business",
+        "science",
+        "accredited",
+        "chatbot"
+      ],
+      [
+        "program",
+        "online",
+        "accredited",
+        "chatbot",
+        "campus"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-004",
+    "conversation": [
+      {
+        "user_id": "user-004",
+        "message": "When does the winter semester start at Chatbot?"
+      },
+      {
+        "user_id": "user-004",
+        "message": "What are the exam period dates for this semester?"
+      }
+    ],
+    "expected_intents": [
+      "semester_inquiry",
+      "semester_inquiry"
+    ],
+    "expected_response_keywords": [
+      [
+        "semester",
+        "winter",
+        "october",
+        "summer",
+        "april"
+      ],
+      [
+        "semester",
+        "exam",
+        "winter",
+        "summer",
+        "october"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-005",
+    "conversation": [
+      {
+        "user_id": "user-005",
+        "message": "Are there any scholarships at Chatbot?"
+      },
+      {
+        "user_id": "user-005",
+        "message": "What financial aid options are available for students?"
+      },
+      {
+        "user_id": "user-005",
+        "message": "How do I apply for financial support at Chatbot?"
+      }
+    ],
+    "expected_intents": [
+      "student_support",
+      "student_support",
+      "student_support"
+    ],
+    "expected_response_keywords": [
+      [
+        "scholarship",
+        "merit",
+        "fee",
+        "award",
+        "financial"
+      ],
+      [
+        "scholarship",
+        "merit",
+        "fee",
+        "financial",
+        "grant"
+      ],
+      [
+        "scholarship",
+        "apply",
+        "fee",
+        "merit",
+        "financial"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-006",
+    "conversation": [
+      {
+        "user_id": "user-006",
+        "message": "How are exams structured at Chatbot?"
+      },
+      {
+        "user_id": "user-006",
+        "message": "What grades do I need to pass each assessment?"
+      },
+      {
+        "user_id": "user-006",
+        "message": "When are exam results published?"
+      }
+    ],
+    "expected_intents": [
+      "exam_inquiry",
+      "exam_inquiry",
+      "exam_inquiry"
+    ],
+    "expected_response_keywords": [
+      [
+        "exam",
+        "assessment",
+        "online",
+        "assignment",
+        "program"
+      ],
+      [
+        "grade",
+        "pass",
+        "assessment",
+        "exam",
+        "retake"
+      ],
+      [
+        "exam",
+        "result",
+        "grade",
+        "week",
+        "portal"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-007",
+    "conversation": [
+      {
+        "user_id": "user-007",
+        "message": "I am not sure which program to choose for my career."
+      },
+      {
+        "user_id": "user-007",
+        "message": "Which data science program would you recommend?"
+      },
+      {
+        "user_id": "user-007",
+        "message": "Thanks for the advice! Goodbye!"
+      }
+    ],
+    "expected_intents": [
+      "academic_advice",
+      "academic_advice",
+      "farewell"
+    ],
+    "expected_response_keywords": [
+      [
+        "program",
+        "career",
+        "recommend",
+        "demand",
+        "psychology"
+      ],
+      [
+        "program",
+        "career",
+        "recommend",
+        "science",
+        "data"
+      ],
+      [
+        "thank",
+        "goodbye",
+        "luck",
+        "study",
+        "help"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-008",
+    "conversation": [
+      {
+        "user_id": "user-008",
+        "message": "Can I pay tuition fees in monthly installments?"
+      },
+      {
+        "user_id": "user-008",
+        "message": "Is there a discount for full semester payment in advance?"
+      }
+    ],
+    "expected_intents": [
+      "tuition_inquiry",
+      "tuition_inquiry"
+    ],
+    "expected_response_keywords": [
+      [
+        "tuition",
+        "fee",
+        "payment",
+        "semester",
+        "program"
+      ],
+      [
+        "fee",
+        "semester",
+        "payment",
+        "tuition",
+        "program"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-009",
+    "conversation": [
+      {
+        "user_id": "user-009",
+        "message": "What subjects are in the MBA program?"
+      },
+      {
+        "user_id": "user-009",
+        "message": "Is there a specialization in digital marketing?"
+      },
+      {
+        "user_id": "user-009",
+        "message": "How many modules are in the curriculum?"
+      }
+    ],
+    "expected_intents": [
+      "course_inquiry",
+      "course_inquiry",
+      "course_inquiry"
+    ],
+    "expected_response_keywords": [
+      [
+        "program",
+        "business",
+        "accredited",
+        "chatbot",
+        "science"
+      ],
+      [
+        "program",
+        "business",
+        "accredited",
+        "chatbot",
+        "science"
+      ],
+      [
+        "program",
+        "business",
+        "accredited",
+        "chatbot",
+        "science"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-010",
+    "conversation": [
+      {
+        "user_id": "user-010",
+        "message": "When does the summer semester begin?"
+      },
+      {
+        "user_id": "user-010",
+        "message": "I want to enroll — how do I start my application?"
+      },
+      {
+        "user_id": "user-010",
+        "message": "What is the total annual tuition cost?"
+      },
+      {
+        "user_id": "user-010",
+        "message": "Thanks so much! Goodbye!"
+      }
+    ],
+    "expected_intents": [
+      "semester_inquiry",
+      "enrollment_inquiry",
+      "tuition_inquiry",
+      "farewell"
+    ],
+    "expected_response_keywords": [
+      [
+        "semester",
+        "summer",
+        "april",
+        "winter",
+        "october"
+      ],
+      [
+        "enroll",
+        "process",
+        "week",
+        "school",
+        "apply"
+      ],
+      [
+        "tuition",
+        "fee",
+        "program",
+        "semester",
+        "payment"
+      ],
+      [
+        "thank",
+        "goodbye",
+        "luck",
+        "study",
+        "help"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-011",
+    "conversation": [
+      {
+        "user_id": "user-011",
+        "message": "Is there student counseling available at Chatbot?"
+      },
+      {
+        "user_id": "user-011",
+        "message": "I need guidance — how can I get academic support?"
+      }
+    ],
+    "expected_intents": [
+      "student_support",
+      "student_support"
+    ],
+    "expected_response_keywords": [
+      [
+        "scholarship",
+        "merit",
+        "fee",
+        "award",
+        "financial"
+      ],
+      [
+        "scholarship",
+        "merit",
+        "fee",
+        "financial",
+        "award"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-012",
+    "conversation": [
+      {
+        "user_id": "user-012",
+        "message": "I am interested in a Bachelor degree in Psychology."
+      },
+      {
+        "user_id": "user-012",
+        "message": "What admission requirements apply for this program?"
+      },
+      {
+        "user_id": "user-012",
+        "message": "How many years does the Bachelor degree program take?"
+      }
+    ],
+    "expected_intents": [
+      "course_inquiry",
+      "enrollment_inquiry",
+      "course_inquiry"
+    ],
+    "expected_response_keywords": [
+      [
+        "program",
+        "business",
+        "science",
+        "accredited",
+        "chatbot"
+      ],
+      [
+        "enroll",
+        "process",
+        "week",
+        "school",
+        "apply"
+      ],
+      [
+        "program",
+        "business",
+        "science",
+        "accredited",
+        "chatbot"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-013",
+    "conversation": [
+      {
+        "user_id": "user-013",
+        "message": "Should I choose a Masters in Business or Data Science?"
+      },
+      {
+        "user_id": "user-013",
+        "message": "Which option has better future career prospects?"
+      },
+      {
+        "user_id": "user-013",
+        "message": "I want to apply for the Data Science program now."
+      },
+      {
+        "user_id": "user-013",
+        "message": "Thanks for the help! Goodbye!"
+      }
+    ],
+    "expected_intents": [
+      "academic_advice",
+      "academic_advice",
+      "enrollment_inquiry",
+      "farewell"
+    ],
+    "expected_response_keywords": [
+      [
+        "program",
+        "career",
+        "recommend",
+        "demand",
+        "passion"
+      ],
+      [
+        "program",
+        "career",
+        "recommend",
+        "demand",
+        "passion"
+      ],
+      [
+        "enroll",
+        "process",
+        "week",
+        "school",
+        "apply"
+      ],
+      [
+        "thank",
+        "goodbye",
+        "luck",
+        "study",
+        "help"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-014",
+    "conversation": [
+      {
+        "user_id": "user-014",
+        "message": "What tips can you give me to prepare for exams?"
+      },
+      {
+        "user_id": "user-014",
+        "message": "What happens if I fail an exam or assignment?"
+      },
+      {
+        "user_id": "user-014",
+        "message": "How are exam grades calculated at Chatbot?"
+      }
+    ],
+    "expected_intents": [
+      "academic_advice",
+      "exam_inquiry",
+      "exam_inquiry"
+    ],
+    "expected_response_keywords": [
+      [
+        "program",
+        "career",
+        "recommend",
+        "demand",
+        "passion"
+      ],
+      [
+        "exam",
+        "assessment",
+        "retake",
+        "grade",
+        "assignment"
+      ],
+      [
+        "exam",
+        "assessment",
+        "grade",
+        "assignment",
+        "online"
+      ]
+    ]
+  },
+  {
+    "test_id": "testCase-015",
+    "conversation": [
+      {
+        "user_id": "user-015",
+        "message": "What programs do you offer at Chatbot system?"
+      },
+      {
+        "user_id": "user-015",
+        "message": "What programs do you offer in the business field?"
+      },
+      {
+        "user_id": "user-015",
+        "message": "Which business program would you recommend for a career in finance?"
+      },
+      {
+        "user_id": "user-015",
+        "message": "How much does the Masters program cost per semester?"
+      },
+      {
+        "user_id": "user-015",
+        "message": "How do I begin the enrollment at Chatbot?"
+      },
+      {
+        "user_id": "user-015",
+        "message": "Thanks so much! Goodbye!"
+      }
+    ],
+    "expected_intents": [
+      "course_inquiry",
+      "course_inquiry",
+      "academic_advice",
+      "tuition_inquiry",
+      "enrollment_inquiry",
+      "farewell"
+    ],
+    "expected_response_keywords": [
+      [
+        "program",
+        "business",
+        "science",
+        "accredited",
+        "chatbot"
+      ],
+      [
+        "program",
+        "business",
+        "science",
+        "accredited",
+        "chatbot"
+      ],
+      [
+        "program",
+        "career",
+        "recommend",
+        "demand",
+        "passion"
+      ],
+      [
+        "tuition",
+        "fee",
+        "program",
+        "semester",
+        "payment"
+      ],
+      [
+        "enroll",
+        "process",
+        "week",
+        "school",
+        "apply"
+      ],
+      [
+        "thank",
+        "goodbye",
+        "luck",
+        "study",
+        "help"
+      ]
+    ]
+  }
+]

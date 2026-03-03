@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  # The Chatbot API running on port 8080
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    command: ["python", "-m", "mock_api.main"]
+    env_file:
+      - mock_api/.env
+
+  # The Evaluator pipeline
+  evaluator:
+    build: .
+    depends_on:
+      - api
+    command: >
+      python -m evaluator.run_tests 
+      --dataset test_cases.json 
+      --base-url http://api:8080 
+      --runs 3 
+      --output /app/report.json
+    env_file:
+      - evaluator/.env
+    # Map the local directory so the evaluator can spit out the report.json locally
+    volumes:
+      - .:/app
