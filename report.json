@@ -1,0 +1,3499 @@
+{
+  "total_tests": 15,
+  "passed_tests": 14,
+  "failed_tests": 1,
+  "overall_intent_accuracy": "95.74%",
+  "overall_response_pass_rate": "92.22%",
+  "overall_avg_coverage_rate": "51.93%",
+  "overall_avg_latency_ms": 843.1,
+  "failed_test_ids": [
+    "testCase-013"
+  ],
+  "test_results": [
+    {
+      "test_id": "testCase-001",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "I want to know about tuition fees at Chatbot.",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": false,
+              "response_text": "Please visit our main website for the latest news and updates.",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "semester",
+                "tuition",
+                "program",
+                "payment",
+                "fee"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.0639,
+              "response_passed": false,
+              "latency_ms": 234.41316606476903
+            },
+            {
+              "turn_index": 2,
+              "user_message": "How much does a program cost per semester?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers competitive fees: Bachelor programs from €6,390/year (online) and Master programs from €7,560/year. Many programs include free learning materials.",
+              "covered_keywords": [
+                "program (lemma)",
+                "fee (lemma)"
+              ],
+              "missing_keywords": [
+                "cost",
+                "tuition",
+                "semester"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.325,
+              "response_passed": true,
+              "latency_ms": 2247.6120421197265
+            }
+          ],
+          "intent_accuracy": 0.5,
+          "response_pass_rate": 0.5,
+          "avg_coverage_rate": 0.2,
+          "avg_latency_ms": 1241.01,
+          "passed": false
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "I want to know about tuition fees at Chatbot.",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "Tuition at Chatbot depends on your chosen program. Bachelor programs start from €6,390/year and Master programs from €7,560/year. Flexible payment plans are available!",
+              "covered_keywords": [
+                "tuition (lemma)",
+                "program (lemma)",
+                "payment (lemma)"
+              ],
+              "missing_keywords": [
+                "fee",
+                "semester"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2726,
+              "response_passed": true,
+              "latency_ms": 711.4340830594301
+            },
+            {
+              "turn_index": 2,
+              "user_message": "How much does a program cost per semester?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "The cost per semester varies by program. Bachelor degrees typically start from €3,195/semester. Contact admissions for exact figures and available payment plans.",
+              "covered_keywords": [
+                "cost (lemma)",
+                "semester (lemma)",
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "tuition",
+                "fee"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.4466,
+              "response_passed": true,
+              "latency_ms": 777.5930420029908
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.6,
+          "avg_latency_ms": 744.51,
+          "passed": true
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "I want to know about tuition fees at Chatbot.",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "The cost per semester varies by program. Bachelor degrees typically start from €3,195/semester. Contact admissions for exact figures and available payment plans.",
+              "covered_keywords": [
+                "program (lemma)",
+                "semester (lemma)",
+                "payment (lemma)"
+              ],
+              "missing_keywords": [
+                "tuition",
+                "fee"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.4466,
+              "response_passed": true,
+              "latency_ms": 1106.2471659388393
+            },
+            {
+              "turn_index": 2,
+              "user_message": "How much does a program cost per semester?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "The cost per semester varies by program. Bachelor degrees typically start from €3,195/semester. Contact admissions for exact figures and available payment plans.",
+              "covered_keywords": [
+                "cost (lemma)",
+                "semester (lemma)",
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "tuition",
+                "fee"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.4466,
+              "response_passed": true,
+              "latency_ms": 583.9998750016093
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.6,
+          "avg_latency_ms": 845.12,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 0.8333,
+      "response_pass_rate": 0.8333,
+      "avg_coverage_rate": 0.4667,
+      "avg_latency_ms": 943.55,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-002",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "How do I enroll at Chatbot?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "To apply at Chatbot: 1) Choose your program, 2) Submit your application online, 3) Upload your documents. You can start enrollment year-round — no fixed intake dates!",
+              "covered_keywords": [
+                "apply (lemma)"
+              ],
+              "missing_keywords": [
+                "enroll",
+                "process",
+                "week",
+                "school"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.4163,
+              "response_passed": true,
+              "latency_ms": 1134.359834017232
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What documents do I need to apply?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "You can enroll anytime at Chatbot. The process takes about 1–2 weeks. You'll need your school-leaving certificate and a valid ID. Ready to begin your application?",
+              "covered_keywords": [
+                "certificate (lemma)"
+              ],
+              "missing_keywords": [
+                "apply",
+                "program",
+                "upload",
+                "documents"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.1846,
+              "response_passed": true,
+              "latency_ms": 1747.5065828766674
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How long does the admission process take?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "Enrolling at Chatbot is simple! Submit your application online at chatbot.de, upload your documents, and our admissions team will review within 2–3 business days.",
+              "covered_keywords": [
+                "application (lemma)",
+                "admission (lemma)"
+              ],
+              "missing_keywords": [
+                "enroll",
+                "process",
+                "week"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.3665,
+              "response_passed": true,
+              "latency_ms": 1597.3208749201149
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.2667,
+          "avg_latency_ms": 1493.06,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "How do I enroll at Chatbot?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "Enrolling at Chatbot is simple! Submit your application online at chatbot.de, upload your documents, and our admissions team will review within 2–3 business days.",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "enroll",
+                "apply",
+                "process",
+                "school",
+                "week"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.3665,
+              "response_passed": false,
+              "latency_ms": 625.0423749443144
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What documents do I need to apply?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "You can enroll anytime at Chatbot. The process takes about 1–2 weeks. You'll need your school-leaving certificate and a valid ID. Ready to begin your application?",
+              "covered_keywords": [
+                "certificate (lemma)"
+              ],
+              "missing_keywords": [
+                "apply",
+                "program",
+                "upload",
+                "documents"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.1846,
+              "response_passed": true,
+              "latency_ms": 653.2729167956859
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How long does the admission process take?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "To apply at Chatbot: 1) Choose your program, 2) Submit your application online, 3) Upload your documents. You can start enrollment year-round — no fixed intake dates!",
+              "covered_keywords": [
+                "application (lemma)"
+              ],
+              "missing_keywords": [
+                "enroll",
+                "admission",
+                "process",
+                "week"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.4163,
+              "response_passed": true,
+              "latency_ms": 356.5336251631379
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 0.6667,
+          "avg_coverage_rate": 0.1333,
+          "avg_latency_ms": 544.95,
+          "passed": false
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "How do I enroll at Chatbot?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "To apply at Chatbot: 1) Choose your program, 2) Submit your application online, 3) Upload your documents. You can start enrollment year-round — no fixed intake dates!",
+              "covered_keywords": [
+                "apply (lemma)"
+              ],
+              "missing_keywords": [
+                "enroll",
+                "process",
+                "week",
+                "school"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.4163,
+              "response_passed": true,
+              "latency_ms": 282.1176659781486
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What documents do I need to apply?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "Enrolling at Chatbot is simple! Submit your application online at chatbot.de, upload your documents, and our admissions team will review within 2–3 business days.",
+              "covered_keywords": [
+                "documents (lemma)",
+                "upload (lemma)"
+              ],
+              "missing_keywords": [
+                "apply",
+                "program",
+                "certificate"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.2477,
+              "response_passed": true,
+              "latency_ms": 768.6736250761896
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How long does the admission process take?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "Enrolling at Chatbot is simple! Submit your application online at chatbot.de, upload your documents, and our admissions team will review within 2–3 business days.",
+              "covered_keywords": [
+                "application (lemma)",
+                "admission (lemma)"
+              ],
+              "missing_keywords": [
+                "enroll",
+                "process",
+                "week"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.3665,
+              "response_passed": true,
+              "latency_ms": 701.4921670779586
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.3333,
+          "avg_latency_ms": 584.09,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 1.0,
+      "response_pass_rate": 0.8889,
+      "avg_coverage_rate": 0.2444,
+      "avg_latency_ms": 874.03,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-003",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What Bachelor programs does Chatbot offer?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot has programs in Business, Tech, Health, and Social Sciences. All programs are accredited and internationally recognized. Which field interests you most?",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "accredited (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 713.2758749648929
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What programs and courses can I study at Chatbot?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 1877.2503749933094
+            },
+            {
+              "turn_index": 3,
+              "user_message": "Are Chatbot programs offered in an online format?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "online (lemma)",
+                "chatbot (lemma)",
+                "campus (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 1926.318832905963
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.8667,
+          "avg_latency_ms": 1505.62,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What Bachelor programs does Chatbot offer?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Our program portfolio includes Bachelor's, Master's, and MBA degrees across 20+ fields. Popular programs include Data Science, Marketing, and International Management.",
+              "covered_keywords": [
+                "program (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited",
+                "business",
+                "chatbot"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.3737,
+              "response_passed": true,
+              "latency_ms": 971.4173751417547
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What programs and courses can I study at Chatbot?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 279.4276671484113
+            },
+            {
+              "turn_index": 3,
+              "user_message": "Are Chatbot programs offered in an online format?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Our program portfolio includes Bachelor's, Master's, and MBA degrees across 20+ fields. Popular programs include Data Science, Marketing, and International Management.",
+              "covered_keywords": [
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited",
+                "campus",
+                "online",
+                "chatbot"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.3737,
+              "response_passed": true,
+              "latency_ms": 333.8760419283062
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.4667,
+          "avg_latency_ms": 528.24,
+          "passed": true
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What Bachelor programs does Chatbot offer?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Our program portfolio includes Bachelor's, Master's, and MBA degrees across 20+ fields. Popular programs include Data Science, Marketing, and International Management.",
+              "covered_keywords": [
+                "program (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited",
+                "business",
+                "chatbot"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.3737,
+              "response_passed": true,
+              "latency_ms": 799.5394170284271
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What programs and courses can I study at Chatbot?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 733.8613749016076
+            },
+            {
+              "turn_index": 3,
+              "user_message": "Are Chatbot programs offered in an online format?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Our program portfolio includes Bachelor's, Master's, and MBA degrees across 20+ fields. Popular programs include Data Science, Marketing, and International Management.",
+              "covered_keywords": [
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited",
+                "campus",
+                "online",
+                "chatbot"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.3737,
+              "response_passed": true,
+              "latency_ms": 570.791166042909
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.4667,
+          "avg_latency_ms": 701.4,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 1.0,
+      "response_pass_rate": 1.0,
+      "avg_coverage_rate": 0.6,
+      "avg_latency_ms": 911.75,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-004",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "When does the winter semester start at Chatbot?",
+              "expected_intent": "semester_inquiry",
+              "actual_intent": "semester_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot operates on a flexible semester model. Standard semesters run October–March (Winter) and April–September (Summer). You can start mid-semester too!",
+              "covered_keywords": [
+                "semester (lemma)",
+                "winter (lemma)",
+                "october (lemma)",
+                "summer (lemma)",
+                "april (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 1372.1460001543164
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What are the exam period dates for this semester?",
+              "expected_intent": "semester_inquiry",
+              "actual_intent": "semester_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot semesters last approximately 6 months. Online programs offer rolling enrollment. Exam periods are at the end of each semester.",
+              "covered_keywords": [
+                "semester (lemma)",
+                "exam (lemma)"
+              ],
+              "missing_keywords": [
+                "october",
+                "summer",
+                "winter"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.1779,
+              "response_passed": true,
+              "latency_ms": 1310.4921660851687
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.7,
+          "avg_latency_ms": 1341.32,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "When does the winter semester start at Chatbot?",
+              "expected_intent": "semester_inquiry",
+              "actual_intent": "semester_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot operates on a flexible semester model. Standard semesters run October–March (Winter) and April–September (Summer). You can start mid-semester too!",
+              "covered_keywords": [
+                "semester (lemma)",
+                "winter (lemma)",
+                "october (lemma)",
+                "summer (lemma)",
+                "april (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 907.3612911161035
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What are the exam period dates for this semester?",
+              "expected_intent": "semester_inquiry",
+              "actual_intent": "semester_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot semesters last approximately 6 months. Online programs offer rolling enrollment. Exam periods are at the end of each semester.",
+              "covered_keywords": [
+                "semester (lemma)",
+                "exam (lemma)"
+              ],
+              "missing_keywords": [
+                "october",
+                "summer",
+                "winter"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.1779,
+              "response_passed": true,
+              "latency_ms": 1106.2830828595906
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.7,
+          "avg_latency_ms": 1006.82,
+          "passed": true
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "When does the winter semester start at Chatbot?",
+              "expected_intent": "semester_inquiry",
+              "actual_intent": "semester_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot operates on a flexible semester model. Standard semesters run October–March (Winter) and April–September (Summer). You can start mid-semester too!",
+              "covered_keywords": [
+                "semester (lemma)",
+                "winter (lemma)",
+                "october (lemma)",
+                "summer (lemma)",
+                "april (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 409.21962494030595
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What are the exam period dates for this semester?",
+              "expected_intent": "semester_inquiry",
+              "actual_intent": "semester_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot operates on a flexible semester model. Standard semesters run October–March (Winter) and April–September (Summer). You can start mid-semester too!",
+              "covered_keywords": [
+                "semester (lemma)",
+                "winter (lemma)",
+                "summer (lemma)",
+                "october (lemma)"
+              ],
+              "missing_keywords": [
+                "exam"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1305,
+              "response_passed": true,
+              "latency_ms": 542.3711251933128
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.9,
+          "avg_latency_ms": 475.8,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 1.0,
+      "response_pass_rate": 1.0,
+      "avg_coverage_rate": 0.7667,
+      "avg_latency_ms": 941.31,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-005",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Are there any scholarships at Chatbot?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Our student support services include academic advising, mental health counseling, career coaching, and financial aid consultations — all available online.",
+              "covered_keywords": [
+                "financial (lemma)"
+              ],
+              "missing_keywords": [
+                "scholarship",
+                "fee",
+                "merit",
+                "award"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.3662,
+              "response_passed": true,
+              "latency_ms": 1373.4872918576002
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What financial aid options are available for students?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Chatbot provides comprehensive student support: scholarships, payment plans, a dedicated student advisor for each learner, and 24/7 online student services.",
+              "covered_keywords": [
+                "scholarship (lemma)"
+              ],
+              "missing_keywords": [
+                "grant",
+                "fee",
+                "financial",
+                "merit"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.1028,
+              "response_passed": true,
+              "latency_ms": 1795.475124847144
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How do I apply for financial support at Chatbot?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Chatbot provides comprehensive student support: scholarships, payment plans, a dedicated student advisor for each learner, and 24/7 online student services.",
+              "covered_keywords": [
+                "scholarship (lemma)"
+              ],
+              "missing_keywords": [
+                "fee",
+                "financial",
+                "apply",
+                "merit"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.0933,
+              "response_passed": true,
+              "latency_ms": 1074.9458749778569
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.2,
+          "avg_latency_ms": 1414.64,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Are there any scholarships at Chatbot?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Our student support services include academic advising, mental health counseling, career coaching, and financial aid consultations — all available online.",
+              "covered_keywords": [
+                "financial (lemma)"
+              ],
+              "missing_keywords": [
+                "scholarship",
+                "fee",
+                "merit",
+                "award"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.3662,
+              "response_passed": true,
+              "latency_ms": 648.2225840445608
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What financial aid options are available for students?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Our student support services include academic advising, mental health counseling, career coaching, and financial aid consultations — all available online.",
+              "covered_keywords": [
+                "financial (lemma)"
+              ],
+              "missing_keywords": [
+                "scholarship",
+                "grant",
+                "fee",
+                "merit"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.3662,
+              "response_passed": true,
+              "latency_ms": 319.7900000959635
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How do I apply for financial support at Chatbot?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Chatbot provides comprehensive student support: scholarships, payment plans, a dedicated student advisor for each learner, and 24/7 online student services.",
+              "covered_keywords": [
+                "scholarship (lemma)"
+              ],
+              "missing_keywords": [
+                "fee",
+                "financial",
+                "apply",
+                "merit"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.0933,
+              "response_passed": true,
+              "latency_ms": 699.4321660604328
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.2,
+          "avg_latency_ms": 555.81,
+          "passed": true
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Are there any scholarships at Chatbot?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Chatbot offers various scholarships including merit-based awards (up to 30% fee reduction) and need-based grants. Contact our financial aid office to check eligibility.",
+              "covered_keywords": [
+                "scholarship (lemma)",
+                "merit (lemma)",
+                "fee (lemma)",
+                "award (lemma)",
+                "financial (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 279.10091704688966
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What financial aid options are available for students?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Chatbot offers various scholarships including merit-based awards (up to 30% fee reduction) and need-based grants. Contact our financial aid office to check eligibility.",
+              "covered_keywords": [
+                "scholarship (lemma)",
+                "merit (lemma)",
+                "fee (lemma)",
+                "financial (lemma)",
+                "grant (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 517.1879171393812
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How do I apply for financial support at Chatbot?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Chatbot offers various scholarships including merit-based awards (up to 30% fee reduction) and need-based grants. Contact our financial aid office to check eligibility.",
+              "covered_keywords": [
+                "scholarship (lemma)",
+                "fee (lemma)",
+                "merit (lemma)",
+                "financial (lemma)"
+              ],
+              "missing_keywords": [
+                "apply"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1788,
+              "response_passed": true,
+              "latency_ms": 328.51254218257964
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.9333,
+          "avg_latency_ms": 374.93,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 1.0,
+      "response_pass_rate": 1.0,
+      "avg_coverage_rate": 0.4444,
+      "avg_latency_ms": 781.79,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-006",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "How are exams structured at Chatbot?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot uses a mix of written assignments, case studies, and online exams. For online programs, most assessments are submitted digitally. Pass mark is typically 50%.",
+              "covered_keywords": [
+                "exam (lemma)",
+                "assessment (lemma)",
+                "online (lemma)",
+                "assignment (lemma)",
+                "program (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 891.6183339897543
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What grades do I need to pass each assessment?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "At Chatbot, most online programs use portfolio-based assessments (assignments and projects) rather than traditional exams. Some programs include proctored online exams.",
+              "covered_keywords": [
+                "assessment (lemma)",
+                "exam (lemma)"
+              ],
+              "missing_keywords": [
+                "grade",
+                "retake",
+                "pass"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.237,
+              "response_passed": true,
+              "latency_ms": 2018.8812499400228
+            },
+            {
+              "turn_index": 3,
+              "user_message": "When are exam results published?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "Grades at Chatbot follow the German scale (1.0–5.0) where 1.0 is the best. You need at least 4.0 (pass) in each assessment. Results are published within 4 weeks.",
+              "covered_keywords": [
+                "result (lemma)",
+                "grade (lemma)",
+                "week (lemma)"
+              ],
+              "missing_keywords": [
+                "exam",
+                "portal"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2359,
+              "response_passed": true,
+              "latency_ms": 1450.7622090168297
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.6667,
+          "avg_latency_ms": 1453.75,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "How are exams structured at Chatbot?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "Grades at Chatbot follow the German scale (1.0–5.0) where 1.0 is the best. You need at least 4.0 (pass) in each assessment. Results are published within 4 weeks.",
+              "covered_keywords": [
+                "assessment (lemma)"
+              ],
+              "missing_keywords": [
+                "exam",
+                "assignment",
+                "program",
+                "online"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.2359,
+              "response_passed": true,
+              "latency_ms": 883.3451250102371
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What grades do I need to pass each assessment?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "At Chatbot, most online programs use portfolio-based assessments (assignments and projects) rather than traditional exams. Some programs include proctored online exams.",
+              "covered_keywords": [
+                "assessment (lemma)",
+                "exam (lemma)"
+              ],
+              "missing_keywords": [
+                "grade",
+                "retake",
+                "pass"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.237,
+              "response_passed": true,
+              "latency_ms": 463.72270793654025
+            },
+            {
+              "turn_index": 3,
+              "user_message": "When are exam results published?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "Grades at Chatbot follow the German scale (1.0–5.0) where 1.0 is the best. You need at least 4.0 (pass) in each assessment. Results are published within 4 weeks.",
+              "covered_keywords": [
+                "result (lemma)",
+                "grade (lemma)",
+                "week (lemma)"
+              ],
+              "missing_keywords": [
+                "exam",
+                "portal"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2359,
+              "response_passed": true,
+              "latency_ms": 775.8497081231326
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.4,
+          "avg_latency_ms": 707.64,
+          "passed": true
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "How are exams structured at Chatbot?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": false,
+              "response_text": "Please visit our main website for the latest news and updates.",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "online",
+                "exam",
+                "assignment",
+                "program",
+                "assessment"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.1753,
+              "response_passed": false,
+              "latency_ms": 384.39704198390245
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What grades do I need to pass each assessment?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "At Chatbot, most online programs use portfolio-based assessments (assignments and projects) rather than traditional exams. Some programs include proctored online exams.",
+              "covered_keywords": [
+                "assessment (lemma)",
+                "exam (lemma)"
+              ],
+              "missing_keywords": [
+                "grade",
+                "retake",
+                "pass"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.237,
+              "response_passed": true,
+              "latency_ms": 737.2899579349905
+            },
+            {
+              "turn_index": 3,
+              "user_message": "When are exam results published?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "Grades at Chatbot follow the German scale (1.0–5.0) where 1.0 is the best. You need at least 4.0 (pass) in each assessment. Results are published within 4 weeks.",
+              "covered_keywords": [
+                "result (lemma)",
+                "grade (lemma)",
+                "week (lemma)"
+              ],
+              "missing_keywords": [
+                "exam",
+                "portal"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2359,
+              "response_passed": true,
+              "latency_ms": 469.3658750038594
+            }
+          ],
+          "intent_accuracy": 0.6667,
+          "response_pass_rate": 0.6667,
+          "avg_coverage_rate": 0.3333,
+          "avg_latency_ms": 530.35,
+          "passed": false
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 0.8889,
+      "response_pass_rate": 0.8889,
+      "avg_coverage_rate": 0.4667,
+      "avg_latency_ms": 897.25,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-007",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "I am not sure which program to choose for my career.",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "My advice: choose a program aligned with your passion AND market demand. Chatbot's most in-demand programs are Data Science, Business Administration, and Computer Science.",
+              "covered_keywords": [
+                "program (lemma)",
+                "demand (lemma)"
+              ],
+              "missing_keywords": [
+                "career",
+                "psychology",
+                "recommend"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.2559,
+              "response_passed": true,
+              "latency_ms": 1835.8779579866678
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Which data science program would you recommend?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "My advice: choose a program aligned with your passion AND market demand. Chatbot's most in-demand programs are Data Science, Business Administration, and Computer Science.",
+              "covered_keywords": [
+                "program (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "career",
+                "recommend",
+                "data"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.2559,
+              "response_passed": true,
+              "latency_ms": 443.8543750438839
+            },
+            {
+              "turn_index": 3,
+              "user_message": "Thanks for the advice! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "Thank you for reaching out to Chatbot! Best of luck with your studies.",
+              "covered_keywords": [
+                "thank (lemma)",
+                "luck (lemma)",
+                "study (lemma)"
+              ],
+              "missing_keywords": [
+                "help",
+                "goodbye"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.1109,
+              "response_passed": true,
+              "latency_ms": 1593.8552918378264
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.4667,
+          "avg_latency_ms": 1291.2,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "I am not sure which program to choose for my career.",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "For a career in business and tech, I'd recommend our BSc Business Informatics or MSc Data Science — both are highly sought after by employers globally.",
+              "covered_keywords": [
+                "career (lemma)",
+                "recommend (lemma)"
+              ],
+              "missing_keywords": [
+                "psychology",
+                "program",
+                "demand"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.2048,
+              "response_passed": true,
+              "latency_ms": 678.6566670052707
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Which data science program would you recommend?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "For a career in business and tech, I'd recommend our BSc Business Informatics or MSc Data Science — both are highly sought after by employers globally.",
+              "covered_keywords": [
+                "career (lemma)",
+                "recommend (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "data",
+                "program"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2026,
+              "response_passed": true,
+              "latency_ms": 508.6503329221159
+            },
+            {
+              "turn_index": 3,
+              "user_message": "Thanks for the advice! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "Goodbye! Don't hesitate to contact us again if you have more questions.",
+              "covered_keywords": [
+                "goodbye (lemma)"
+              ],
+              "missing_keywords": [
+                "luck",
+                "help",
+                "study",
+                "thank"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.2019,
+              "response_passed": true,
+              "latency_ms": 694.3022499326617
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.4,
+          "avg_latency_ms": 627.2,
+          "passed": true
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "I am not sure which program to choose for my career.",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "For a career in business and tech, I'd recommend our BSc Business Informatics or MSc Data Science — both are highly sought after by employers globally.",
+              "covered_keywords": [
+                "career (lemma)",
+                "recommend (lemma)"
+              ],
+              "missing_keywords": [
+                "psychology",
+                "program",
+                "demand"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.2048,
+              "response_passed": true,
+              "latency_ms": 535.6740839779377
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Which data science program would you recommend?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "It depends on your goals! For people-oriented careers, Psychology or HR Management are great. For tech careers, explore Computer Science or Data Science.",
+              "covered_keywords": [
+                "career (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "recommend",
+                "program",
+                "data"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.1561,
+              "response_passed": true,
+              "latency_ms": 444.39108297228813
+            },
+            {
+              "turn_index": 3,
+              "user_message": "Thanks for the advice! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "Thank you for reaching out to Chatbot! Best of luck with your studies.",
+              "covered_keywords": [
+                "thank (lemma)",
+                "luck (lemma)",
+                "study (lemma)"
+              ],
+              "missing_keywords": [
+                "help",
+                "goodbye"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.1109,
+              "response_passed": true,
+              "latency_ms": 669.0625001210719
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.4667,
+          "avg_latency_ms": 549.71,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 1.0,
+      "response_pass_rate": 1.0,
+      "avg_coverage_rate": 0.4445,
+      "avg_latency_ms": 822.7,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-008",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Can I pay tuition fees in monthly installments?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "The cost per semester varies by program. Bachelor degrees typically start from €3,195/semester. Contact admissions for exact figures and available payment plans.",
+              "covered_keywords": [
+                "payment (lemma)",
+                "semester (lemma)",
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "tuition",
+                "fee"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.4466,
+              "response_passed": true,
+              "latency_ms": 1742.2408340498805
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Is there a discount for full semester payment in advance?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "Tuition at Chatbot depends on your chosen program. Bachelor programs start from €6,390/year and Master programs from €7,560/year. Flexible payment plans are available!",
+              "covered_keywords": [
+                "payment (lemma)",
+                "tuition (lemma)",
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "fee",
+                "semester"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2726,
+              "response_passed": true,
+              "latency_ms": 429.669083096087
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.6,
+          "avg_latency_ms": 1085.95,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Can I pay tuition fees in monthly installments?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "Tuition at Chatbot depends on your chosen program. Bachelor programs start from €6,390/year and Master programs from €7,560/year. Flexible payment plans are available!",
+              "covered_keywords": [
+                "tuition (lemma)",
+                "payment (lemma)",
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "fee",
+                "semester"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2726,
+              "response_passed": true,
+              "latency_ms": 1205.9349580667913
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Is there a discount for full semester payment in advance?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "The cost per semester varies by program. Bachelor degrees typically start from €3,195/semester. Contact admissions for exact figures and available payment plans.",
+              "covered_keywords": [
+                "semester (lemma)",
+                "payment (lemma)",
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "tuition",
+                "fee"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.4466,
+              "response_passed": true,
+              "latency_ms": 1062.127834185958
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.6,
+          "avg_latency_ms": 1134.03,
+          "passed": true
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Can I pay tuition fees in monthly installments?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "Tuition at Chatbot depends on your chosen program. Bachelor programs start from €6,390/year and Master programs from €7,560/year. Flexible payment plans are available!",
+              "covered_keywords": [
+                "tuition (lemma)",
+                "payment (lemma)",
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "fee",
+                "semester"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2726,
+              "response_passed": true,
+              "latency_ms": 738.6476660612971
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Is there a discount for full semester payment in advance?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers competitive fees: Bachelor programs from €6,390/year (online) and Master programs from €7,560/year. Many programs include free learning materials.",
+              "covered_keywords": [
+                "fee (lemma)",
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "tuition",
+                "semester",
+                "payment"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.2734,
+              "response_passed": true,
+              "latency_ms": 320.07566606625915
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.5,
+          "avg_latency_ms": 529.36,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 1.0,
+      "response_pass_rate": 1.0,
+      "avg_coverage_rate": 0.5667,
+      "avg_latency_ms": 916.45,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-009",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What subjects are in the MBA program?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Our program portfolio includes Bachelor's, Master's, and MBA degrees across 20+ fields. Popular programs include Data Science, Marketing, and International Management.",
+              "covered_keywords": [
+                "program (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited",
+                "business",
+                "chatbot"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.3737,
+              "response_passed": true,
+              "latency_ms": 901.9742498639971
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Is there a specialization in digital marketing?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "chatbot (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 2124.074624851346
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How many modules are in the curriculum?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "chatbot (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 1369.3122500553727
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.6667,
+          "avg_latency_ms": 1465.12,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What subjects are in the MBA program?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot has programs in Business, Tech, Health, and Social Sciences. All programs are accredited and internationally recognized. Which field interests you most?",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "accredited (lemma)",
+                "chatbot (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 647.2774159628898
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Is there a specialization in digital marketing?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "chatbot (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 341.59820806235075
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How many modules are in the curriculum?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot has programs in Business, Tech, Health, and Social Sciences. All programs are accredited and internationally recognized. Which field interests you most?",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "accredited (lemma)",
+                "chatbot (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 479.0057921782136
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.9333,
+          "avg_latency_ms": 489.29,
+          "passed": true
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What subjects are in the MBA program?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot has programs in Business, Tech, Health, and Social Sciences. All programs are accredited and internationally recognized. Which field interests you most?",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "accredited (lemma)",
+                "chatbot (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 246.36587500572205
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Is there a specialization in digital marketing?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot has programs in Business, Tech, Health, and Social Sciences. All programs are accredited and internationally recognized. Which field interests you most?",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "accredited (lemma)",
+                "chatbot (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 329.95774992741644
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How many modules are in the curriculum?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Our program portfolio includes Bachelor's, Master's, and MBA degrees across 20+ fields. Popular programs include Data Science, Marketing, and International Management.",
+              "covered_keywords": [
+                "program (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited",
+                "business",
+                "chatbot"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.3737,
+              "response_passed": true,
+              "latency_ms": 736.8771671317518
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.8,
+          "avg_latency_ms": 437.73,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 1.0,
+      "response_pass_rate": 1.0,
+      "avg_coverage_rate": 0.8,
+      "avg_latency_ms": 797.38,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-010",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "When does the summer semester begin?",
+              "expected_intent": "semester_inquiry",
+              "actual_intent": "semester_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot operates on a flexible semester model. Standard semesters run October–March (Winter) and April–September (Summer). You can start mid-semester too!",
+              "covered_keywords": [
+                "semester (lemma)",
+                "summer (lemma)",
+                "april (lemma)",
+                "winter (lemma)",
+                "october (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 1120.4358341637999
+            },
+            {
+              "turn_index": 2,
+              "user_message": "I want to enroll — how do I start my application?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "Enrolling at Chatbot is simple! Submit your application online at chatbot.de, upload your documents, and our admissions team will review within 2–3 business days.",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "enroll",
+                "apply",
+                "process",
+                "school",
+                "week"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.3665,
+              "response_passed": false,
+              "latency_ms": 2111.36691714637
+            },
+            {
+              "turn_index": 3,
+              "user_message": "What is the total annual tuition cost?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers competitive fees: Bachelor programs from €6,390/year (online) and Master programs from €7,560/year. Many programs include free learning materials.",
+              "covered_keywords": [
+                "fee (lemma)",
+                "program (lemma)"
+              ],
+              "missing_keywords": [
+                "tuition",
+                "semester",
+                "payment"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.2734,
+              "response_passed": true,
+              "latency_ms": 612.2373749967664
+            },
+            {
+              "turn_index": 4,
+              "user_message": "Thanks so much! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "It was a pleasure helping you. We look forward to welcoming you at Chatbot!",
+              "covered_keywords": [
+                "help (lemma)"
+              ],
+              "missing_keywords": [
+                "thank",
+                "goodbye",
+                "luck",
+                "study"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.2379,
+              "response_passed": true,
+              "latency_ms": 869.7566671762615
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 0.75,
+          "avg_coverage_rate": 0.4,
+          "avg_latency_ms": 1178.45,
+          "passed": false
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "When does the summer semester begin?",
+              "expected_intent": "semester_inquiry",
+              "actual_intent": "semester_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot operates on a flexible semester model. Standard semesters run October–March (Winter) and April–September (Summer). You can start mid-semester too!",
+              "covered_keywords": [
+                "semester (lemma)",
+                "summer (lemma)",
+                "april (lemma)",
+                "winter (lemma)",
+                "october (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 262.04912504181266
+            },
+            {
+              "turn_index": 2,
+              "user_message": "I want to enroll — how do I start my application?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "You can enroll anytime at Chatbot. The process takes about 1–2 weeks. You'll need your school-leaving certificate and a valid ID. Ready to begin your application?",
+              "covered_keywords": [
+                "enroll (lemma)",
+                "process (lemma)",
+                "week (lemma)",
+                "school (lemma)"
+              ],
+              "missing_keywords": [
+                "apply"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1846,
+              "response_passed": true,
+              "latency_ms": 390.19504096359015
+            },
+            {
+              "turn_index": 3,
+              "user_message": "What is the total annual tuition cost?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "Tuition at Chatbot depends on your chosen program. Bachelor programs start from €6,390/year and Master programs from €7,560/year. Flexible payment plans are available!",
+              "covered_keywords": [
+                "tuition (lemma)",
+                "program (lemma)",
+                "payment (lemma)"
+              ],
+              "missing_keywords": [
+                "fee",
+                "semester"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2726,
+              "response_passed": true,
+              "latency_ms": 275.0802079681307
+            },
+            {
+              "turn_index": 4,
+              "user_message": "Thanks so much! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "Goodbye! Don't hesitate to contact us again if you have more questions.",
+              "covered_keywords": [
+                "goodbye (lemma)"
+              ],
+              "missing_keywords": [
+                "luck",
+                "help",
+                "study",
+                "thank"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.2019,
+              "response_passed": true,
+              "latency_ms": 317.5009579863399
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.65,
+          "avg_latency_ms": 311.21,
+          "passed": true
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "When does the summer semester begin?",
+              "expected_intent": "semester_inquiry",
+              "actual_intent": "semester_inquiry",
+              "intent_match": true,
+              "response_text": "The academic year at Chatbot is divided into two semesters: Winter (October–March) and Summer (April–September). Course deadlines are flexible for online students.",
+              "covered_keywords": [
+                "semester (lemma)",
+                "summer (lemma)",
+                "april (lemma)",
+                "winter (lemma)",
+                "october (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 297.0741670578718
+            },
+            {
+              "turn_index": 2,
+              "user_message": "I want to enroll — how do I start my application?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "To apply at Chatbot: 1) Choose your program, 2) Submit your application online, 3) Upload your documents. You can start enrollment year-round — no fixed intake dates!",
+              "covered_keywords": [
+                "apply (lemma)"
+              ],
+              "missing_keywords": [
+                "enroll",
+                "process",
+                "week",
+                "school"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.4163,
+              "response_passed": true,
+              "latency_ms": 460.2152919396758
+            },
+            {
+              "turn_index": 3,
+              "user_message": "What is the total annual tuition cost?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "The cost per semester varies by program. Bachelor degrees typically start from €3,195/semester. Contact admissions for exact figures and available payment plans.",
+              "covered_keywords": [
+                "program (lemma)",
+                "semester (lemma)",
+                "payment (lemma)"
+              ],
+              "missing_keywords": [
+                "tuition",
+                "fee"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.4466,
+              "response_passed": true,
+              "latency_ms": 618.6407499480993
+            },
+            {
+              "turn_index": 4,
+              "user_message": "Thanks so much! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "Thank you for reaching out to Chatbot! Best of luck with your studies.",
+              "covered_keywords": [
+                "thank (lemma)",
+                "luck (lemma)",
+                "study (lemma)"
+              ],
+              "missing_keywords": [
+                "help",
+                "goodbye"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.1109,
+              "response_passed": true,
+              "latency_ms": 355.2418330218643
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.6,
+          "avg_latency_ms": 432.79,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 1.0,
+      "response_pass_rate": 0.9167,
+      "avg_coverage_rate": 0.55,
+      "avg_latency_ms": 640.82,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-011",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Is there student counseling available at Chatbot?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Chatbot offers various scholarships including merit-based awards (up to 30% fee reduction) and need-based grants. Contact our financial aid office to check eligibility.",
+              "covered_keywords": [
+                "scholarship (lemma)",
+                "merit (lemma)",
+                "fee (lemma)",
+                "award (lemma)",
+                "financial (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 1829.4984579551965
+            },
+            {
+              "turn_index": 2,
+              "user_message": "I need guidance — how can I get academic support?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Our student support services include academic advising, mental health counseling, career coaching, and financial aid consultations — all available online.",
+              "covered_keywords": [
+                "financial (lemma)"
+              ],
+              "missing_keywords": [
+                "scholarship",
+                "fee",
+                "merit",
+                "award"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.3662,
+              "response_passed": true,
+              "latency_ms": 419.6185830514878
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.6,
+          "avg_latency_ms": 1124.56,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Is there student counseling available at Chatbot?",
+              "expected_intent": "student_support",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": false,
+              "response_text": "Please visit our main website for the latest news and updates.",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "scholarship",
+                "award",
+                "merit",
+                "financial",
+                "fee"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.1015,
+              "response_passed": false,
+              "latency_ms": 1295.3331251628697
+            },
+            {
+              "turn_index": 2,
+              "user_message": "I need guidance — how can I get academic support?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Chatbot offers various scholarships including merit-based awards (up to 30% fee reduction) and need-based grants. Contact our financial aid office to check eligibility.",
+              "covered_keywords": [
+                "scholarship (lemma)",
+                "merit (lemma)",
+                "fee (lemma)",
+                "financial (lemma)",
+                "award (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 1060.884374892339
+            }
+          ],
+          "intent_accuracy": 0.5,
+          "response_pass_rate": 0.5,
+          "avg_coverage_rate": 0.5,
+          "avg_latency_ms": 1178.11,
+          "passed": false
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Is there student counseling available at Chatbot?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Our student support services include academic advising, mental health counseling, career coaching, and financial aid consultations — all available online.",
+              "covered_keywords": [
+                "financial (lemma)"
+              ],
+              "missing_keywords": [
+                "scholarship",
+                "fee",
+                "merit",
+                "award"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.3662,
+              "response_passed": true,
+              "latency_ms": 747.039332985878
+            },
+            {
+              "turn_index": 2,
+              "user_message": "I need guidance — how can I get academic support?",
+              "expected_intent": "student_support",
+              "actual_intent": "student_support",
+              "intent_match": true,
+              "response_text": "Our student support services include academic advising, mental health counseling, career coaching, and financial aid consultations — all available online.",
+              "covered_keywords": [
+                "financial (lemma)"
+              ],
+              "missing_keywords": [
+                "scholarship",
+                "fee",
+                "merit",
+                "award"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.3662,
+              "response_passed": true,
+              "latency_ms": 799.0159171167761
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.2,
+          "avg_latency_ms": 773.03,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 0.8333,
+      "response_pass_rate": 0.8333,
+      "avg_coverage_rate": 0.4333,
+      "avg_latency_ms": 1025.23,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-012",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "I am interested in a Bachelor degree in Psychology.",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot has programs in Business, Tech, Health, and Social Sciences. All programs are accredited and internationally recognized. Which field interests you most?",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "accredited (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 1118.6204999685287
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What admission requirements apply for this program?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "You can enroll anytime at Chatbot. The process takes about 1–2 weeks. You'll need your school-leaving certificate and a valid ID. Ready to begin your application?",
+              "covered_keywords": [
+                "enroll (lemma)",
+                "process (lemma)",
+                "week (lemma)",
+                "school (lemma)"
+              ],
+              "missing_keywords": [
+                "apply"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1846,
+              "response_passed": true,
+              "latency_ms": 998.1035420205444
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How many years does the Bachelor degree program take?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 1286.2379578873515
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.8667,
+          "avg_latency_ms": 1134.32,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "I am interested in a Bachelor degree in Psychology.",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "student_support",
+              "intent_match": false,
+              "response_text": "Please visit our main website for the latest news and updates.",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "science",
+                "business",
+                "chatbot",
+                "accredited",
+                "program"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.1124,
+              "response_passed": false,
+              "latency_ms": 1267.3164578154683
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What admission requirements apply for this program?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "Enrolling at Chatbot is simple! Submit your application online at chatbot.de, upload your documents, and our admissions team will review within 2–3 business days.",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "enroll",
+                "apply",
+                "process",
+                "school",
+                "week"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.3665,
+              "response_passed": false,
+              "latency_ms": 617.7958340849727
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How many years does the Bachelor degree program take?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Our program portfolio includes Bachelor's, Master's, and MBA degrees across 20+ fields. Popular programs include Data Science, Marketing, and International Management.",
+              "covered_keywords": [
+                "program (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited",
+                "business",
+                "chatbot"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.3737,
+              "response_passed": true,
+              "latency_ms": 312.7578750718385
+            }
+          ],
+          "intent_accuracy": 0.6667,
+          "response_pass_rate": 0.3333,
+          "avg_coverage_rate": 0.1333,
+          "avg_latency_ms": 732.62,
+          "passed": false
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "I am interested in a Bachelor degree in Psychology.",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot has programs in Business, Tech, Health, and Social Sciences. All programs are accredited and internationally recognized. Which field interests you most?",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "accredited (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 763.3322500623763
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What admission requirements apply for this program?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "You can enroll anytime at Chatbot. The process takes about 1–2 weeks. You'll need your school-leaving certificate and a valid ID. Ready to begin your application?",
+              "covered_keywords": [
+                "enroll (lemma)",
+                "process (lemma)",
+                "week (lemma)",
+                "school (lemma)"
+              ],
+              "missing_keywords": [
+                "apply"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1846,
+              "response_passed": true,
+              "latency_ms": 670.9691248834133
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How many years does the Bachelor degree program take?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot has programs in Business, Tech, Health, and Social Sciences. All programs are accredited and internationally recognized. Which field interests you most?",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "accredited (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 576.7065410036594
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.9333,
+          "avg_latency_ms": 670.34,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 0.8889,
+      "response_pass_rate": 0.7778,
+      "avg_coverage_rate": 0.6444,
+      "avg_latency_ms": 845.76,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-013",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Should I choose a Masters in Business or Data Science?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "For a career in business and tech, I'd recommend our BSc Business Informatics or MSc Data Science — both are highly sought after by employers globally.",
+              "covered_keywords": [
+                "career (lemma)",
+                "recommend (lemma)"
+              ],
+              "missing_keywords": [
+                "program",
+                "demand",
+                "passion"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.1095,
+              "response_passed": true,
+              "latency_ms": 1572.2303329966962
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Which option has better future career prospects?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "My advice: choose a program aligned with your passion AND market demand. Chatbot's most in-demand programs are Data Science, Business Administration, and Computer Science.",
+              "covered_keywords": [
+                "program (lemma)",
+                "demand (lemma)",
+                "passion (lemma)"
+              ],
+              "missing_keywords": [
+                "career",
+                "recommend"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2559,
+              "response_passed": true,
+              "latency_ms": 1217.0979999937117
+            },
+            {
+              "turn_index": 3,
+              "user_message": "I want to apply for the Data Science program now.",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "Enrolling at Chatbot is simple! Submit your application online at chatbot.de, upload your documents, and our admissions team will review within 2–3 business days.",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "enroll",
+                "apply",
+                "process",
+                "school",
+                "week"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.3665,
+              "response_passed": false,
+              "latency_ms": 869.5690000895411
+            },
+            {
+              "turn_index": 4,
+              "user_message": "Thanks for the help! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "Goodbye! Don't hesitate to contact us again if you have more questions.",
+              "covered_keywords": [
+                "goodbye (lemma)"
+              ],
+              "missing_keywords": [
+                "luck",
+                "help",
+                "study",
+                "thank"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.2019,
+              "response_passed": true,
+              "latency_ms": 785.2762909606099
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 0.75,
+          "avg_coverage_rate": 0.3,
+          "avg_latency_ms": 1111.04,
+          "passed": false
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Should I choose a Masters in Business or Data Science?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "It depends on your goals! For people-oriented careers, Psychology or HR Management are great. For tech careers, explore Computer Science or Data Science.",
+              "covered_keywords": [
+                "career (lemma)"
+              ],
+              "missing_keywords": [
+                "recommend",
+                "program",
+                "passion",
+                "demand"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.1561,
+              "response_passed": true,
+              "latency_ms": 896.8270001932979
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Which option has better future career prospects?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "For a career in business and tech, I'd recommend our BSc Business Informatics or MSc Data Science — both are highly sought after by employers globally.",
+              "covered_keywords": [
+                "career (lemma)",
+                "recommend (lemma)"
+              ],
+              "missing_keywords": [
+                "program",
+                "demand",
+                "passion"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.1095,
+              "response_passed": true,
+              "latency_ms": 260.36375015974045
+            },
+            {
+              "turn_index": 3,
+              "user_message": "I want to apply for the Data Science program now.",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "Enrolling at Chatbot is simple! Submit your application online at chatbot.de, upload your documents, and our admissions team will review within 2–3 business days.",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "enroll",
+                "apply",
+                "process",
+                "school",
+                "week"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.3665,
+              "response_passed": false,
+              "latency_ms": 408.1269591115415
+            },
+            {
+              "turn_index": 4,
+              "user_message": "Thanks for the help! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "Goodbye! Don't hesitate to contact us again if you have more questions.",
+              "covered_keywords": [
+                "goodbye (lemma)"
+              ],
+              "missing_keywords": [
+                "luck",
+                "help",
+                "study",
+                "thank"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.2019,
+              "response_passed": true,
+              "latency_ms": 728.5603338386863
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 0.75,
+          "avg_coverage_rate": 0.2,
+          "avg_latency_ms": 573.47,
+          "passed": false
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "Should I choose a Masters in Business or Data Science?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "It depends on your goals! For people-oriented careers, Psychology or HR Management are great. For tech careers, explore Computer Science or Data Science.",
+              "covered_keywords": [
+                "career (lemma)"
+              ],
+              "missing_keywords": [
+                "recommend",
+                "program",
+                "passion",
+                "demand"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.1561,
+              "response_passed": true,
+              "latency_ms": 533.6408750154078
+            },
+            {
+              "turn_index": 2,
+              "user_message": "Which option has better future career prospects?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "For a career in business and tech, I'd recommend our BSc Business Informatics or MSc Data Science — both are highly sought after by employers globally.",
+              "covered_keywords": [
+                "career (lemma)",
+                "recommend (lemma)"
+              ],
+              "missing_keywords": [
+                "program",
+                "demand",
+                "passion"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.1095,
+              "response_passed": true,
+              "latency_ms": 517.001167172566
+            },
+            {
+              "turn_index": 3,
+              "user_message": "I want to apply for the Data Science program now.",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "You can enroll anytime at Chatbot. The process takes about 1–2 weeks. You'll need your school-leaving certificate and a valid ID. Ready to begin your application?",
+              "covered_keywords": [
+                "enroll (lemma)",
+                "process (lemma)",
+                "week (lemma)",
+                "school (lemma)"
+              ],
+              "missing_keywords": [
+                "apply"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1846,
+              "response_passed": true,
+              "latency_ms": 295.2938338275999
+            },
+            {
+              "turn_index": 4,
+              "user_message": "Thanks for the help! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "course_inquiry",
+              "intent_match": false,
+              "response_text": "Did you know Chatbot was founded in 1998 in Bad Honnef, Germany?",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "thank",
+                "goodbye",
+                "luck",
+                "study",
+                "help"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.0669,
+              "response_passed": false,
+              "latency_ms": 567.585667129606
+            }
+          ],
+          "intent_accuracy": 0.75,
+          "response_pass_rate": 0.75,
+          "avg_coverage_rate": 0.35,
+          "avg_latency_ms": 478.38,
+          "passed": false
+        }
+      ],
+      "majority_passed": false,
+      "intent_accuracy": 0.9167,
+      "response_pass_rate": 0.75,
+      "avg_coverage_rate": 0.2833,
+      "avg_latency_ms": 720.96,
+      "failure_reasons": [
+        "Turn 3: no keywords matched in response  (missing: enroll, apply, process, school, week)",
+        "Turn 4: intent mismatch ('course_inquiry' ≠ 'farewell')",
+        "Turn 4: no keywords matched in response  (missing: thank, goodbye, luck, study, help)"
+      ]
+    },
+    {
+      "test_id": "testCase-014",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What tips can you give me to prepare for exams?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "My advice: choose a program aligned with your passion AND market demand. Chatbot's most in-demand programs are Data Science, Business Administration, and Computer Science.",
+              "covered_keywords": [
+                "program (lemma)",
+                "demand (lemma)",
+                "passion (lemma)"
+              ],
+              "missing_keywords": [
+                "career",
+                "recommend"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2559,
+              "response_passed": true,
+              "latency_ms": 724.9546670354903
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What happens if I fail an exam or assignment?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "At Chatbot, most online programs use portfolio-based assessments (assignments and projects) rather than traditional exams. Some programs include proctored online exams.",
+              "covered_keywords": [
+                "exam (lemma)",
+                "assessment (lemma)",
+                "assignment (lemma)"
+              ],
+              "missing_keywords": [
+                "grade",
+                "retake"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.237,
+              "response_passed": true,
+              "latency_ms": 1509.8487089853734
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How are exam grades calculated at Chatbot?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "At Chatbot, most online programs use portfolio-based assessments (assignments and projects) rather than traditional exams. Some programs include proctored online exams.",
+              "covered_keywords": [
+                "exam (lemma)",
+                "assessment (lemma)",
+                "assignment (lemma)",
+                "online (lemma)"
+              ],
+              "missing_keywords": [
+                "grade"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.237,
+              "response_passed": true,
+              "latency_ms": 1228.95795898512
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.6667,
+          "avg_latency_ms": 1154.59,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What tips can you give me to prepare for exams?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "For a career in business and tech, I'd recommend our BSc Business Informatics or MSc Data Science — both are highly sought after by employers globally.",
+              "covered_keywords": [
+                "career (lemma)",
+                "recommend (lemma)"
+              ],
+              "missing_keywords": [
+                "program",
+                "demand",
+                "passion"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.1095,
+              "response_passed": true,
+              "latency_ms": 781.9628748111427
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What happens if I fail an exam or assignment?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "Grades at Chatbot follow the German scale (1.0–5.0) where 1.0 is the best. You need at least 4.0 (pass) in each assessment. Results are published within 4 weeks.",
+              "covered_keywords": [
+                "assessment (lemma)",
+                "grade (lemma)"
+              ],
+              "missing_keywords": [
+                "exam",
+                "retake",
+                "assignment"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.2359,
+              "response_passed": true,
+              "latency_ms": 975.4825001582503
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How are exam grades calculated at Chatbot?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "At Chatbot, most online programs use portfolio-based assessments (assignments and projects) rather than traditional exams. Some programs include proctored online exams.",
+              "covered_keywords": [
+                "exam (lemma)",
+                "assessment (lemma)",
+                "assignment (lemma)",
+                "online (lemma)"
+              ],
+              "missing_keywords": [
+                "grade"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.237,
+              "response_passed": true,
+              "latency_ms": 781.9449589587748
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.5333,
+          "avg_latency_ms": 846.46,
+          "passed": true
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What tips can you give me to prepare for exams?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "It depends on your goals! For people-oriented careers, Psychology or HR Management are great. For tech careers, explore Computer Science or Data Science.",
+              "covered_keywords": [
+                "career (lemma)"
+              ],
+              "missing_keywords": [
+                "recommend",
+                "program",
+                "passion",
+                "demand"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.1561,
+              "response_passed": true,
+              "latency_ms": 535.0384579505771
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What happens if I fail an exam or assignment?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot uses a mix of written assignments, case studies, and online exams. For online programs, most assessments are submitted digitally. Pass mark is typically 50%.",
+              "covered_keywords": [
+                "exam (lemma)",
+                "assessment (lemma)",
+                "assignment (lemma)"
+              ],
+              "missing_keywords": [
+                "grade",
+                "retake"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2836,
+              "response_passed": true,
+              "latency_ms": 212.5550420023501
+            },
+            {
+              "turn_index": 3,
+              "user_message": "How are exam grades calculated at Chatbot?",
+              "expected_intent": "exam_inquiry",
+              "actual_intent": "exam_inquiry",
+              "intent_match": true,
+              "response_text": "Grades at Chatbot follow the German scale (1.0–5.0) where 1.0 is the best. You need at least 4.0 (pass) in each assessment. Results are published within 4 weeks.",
+              "covered_keywords": [
+                "assessment (lemma)",
+                "grade (lemma)"
+              ],
+              "missing_keywords": [
+                "exam",
+                "assignment",
+                "online"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.2359,
+              "response_passed": true,
+              "latency_ms": 725.4755420144647
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.4,
+          "avg_latency_ms": 491.02,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 1.0,
+      "response_pass_rate": 1.0,
+      "avg_coverage_rate": 0.5333,
+      "avg_latency_ms": 830.69,
+      "failure_reasons": []
+    },
+    {
+      "test_id": "testCase-015",
+      "runs": [
+        {
+          "run_index": 1,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What programs do you offer at Chatbot system?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot has programs in Business, Tech, Health, and Social Sciences. All programs are accredited and internationally recognized. Which field interests you most?",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "accredited (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 1571.2697920389473
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What programs do you offer in the business field?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Our program portfolio includes Bachelor's, Master's, and MBA degrees across 20+ fields. Popular programs include Data Science, Marketing, and International Management.",
+              "covered_keywords": [
+                "program (lemma)",
+                "science (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited",
+                "business",
+                "chatbot"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.3737,
+              "response_passed": true,
+              "latency_ms": 763.8331251218915
+            },
+            {
+              "turn_index": 3,
+              "user_message": "Which business program would you recommend for a career in finance?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "It depends on your goals! For people-oriented careers, Psychology or HR Management are great. For tech careers, explore Computer Science or Data Science.",
+              "covered_keywords": [
+                "career (lemma)"
+              ],
+              "missing_keywords": [
+                "recommend",
+                "program",
+                "passion",
+                "demand"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.1561,
+              "response_passed": true,
+              "latency_ms": 1402.5451669003814
+            },
+            {
+              "turn_index": 4,
+              "user_message": "How much does the Masters program cost per semester?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "The cost per semester varies by program. Bachelor degrees typically start from €3,195/semester. Contact admissions for exact figures and available payment plans.",
+              "covered_keywords": [
+                "program (lemma)",
+                "semester (lemma)",
+                "payment (lemma)"
+              ],
+              "missing_keywords": [
+                "tuition",
+                "fee"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.4466,
+              "response_passed": true,
+              "latency_ms": 1022.8534580674022
+            },
+            {
+              "turn_index": 5,
+              "user_message": "How do I begin the enrollment at Chatbot?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "You can enroll anytime at Chatbot. The process takes about 1–2 weeks. You'll need your school-leaving certificate and a valid ID. Ready to begin your application?",
+              "covered_keywords": [
+                "enroll (lemma)",
+                "process (lemma)",
+                "week (lemma)",
+                "school (lemma)"
+              ],
+              "missing_keywords": [
+                "apply"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1846,
+              "response_passed": true,
+              "latency_ms": 839.4876660313457
+            },
+            {
+              "turn_index": 6,
+              "user_message": "Thanks so much! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "Thank you for reaching out to Chatbot! Best of luck with your studies.",
+              "covered_keywords": [
+                "thank (lemma)",
+                "luck (lemma)",
+                "study (lemma)"
+              ],
+              "missing_keywords": [
+                "help",
+                "goodbye"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.1109,
+              "response_passed": true,
+              "latency_ms": 595.2852079644799
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.6,
+          "avg_latency_ms": 1032.55,
+          "passed": true
+        },
+        {
+          "run_index": 2,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What programs do you offer at Chatbot system?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 535.2353751659393
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What programs do you offer in the business field?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 441.39429111965
+            },
+            {
+              "turn_index": 3,
+              "user_message": "Which business program would you recommend for a career in finance?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "My advice: choose a program aligned with your passion AND market demand. Chatbot's most in-demand programs are Data Science, Business Administration, and Computer Science.",
+              "covered_keywords": [
+                "program (lemma)",
+                "demand (lemma)",
+                "passion (lemma)"
+              ],
+              "missing_keywords": [
+                "career",
+                "recommend"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2559,
+              "response_passed": true,
+              "latency_ms": 672.7265829686075
+            },
+            {
+              "turn_index": 4,
+              "user_message": "How much does the Masters program cost per semester?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "The cost per semester varies by program. Bachelor degrees typically start from €3,195/semester. Contact admissions for exact figures and available payment plans.",
+              "covered_keywords": [
+                "program (lemma)",
+                "semester (lemma)",
+                "payment (lemma)"
+              ],
+              "missing_keywords": [
+                "tuition",
+                "fee"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.4466,
+              "response_passed": true,
+              "latency_ms": 665.797334164381
+            },
+            {
+              "turn_index": 5,
+              "user_message": "How do I begin the enrollment at Chatbot?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "Enrolling at Chatbot is simple! Submit your application online at chatbot.de, upload your documents, and our admissions team will review within 2–3 business days.",
+              "covered_keywords": [],
+              "missing_keywords": [
+                "enroll",
+                "apply",
+                "process",
+                "school",
+                "week"
+              ],
+              "coverage_rate": 0.0,
+              "semantic_score": 0.3665,
+              "response_passed": false,
+              "latency_ms": 247.73112498223782
+            },
+            {
+              "turn_index": 6,
+              "user_message": "Thanks so much! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "Goodbye! Don't hesitate to contact us again if you have more questions.",
+              "covered_keywords": [
+                "goodbye (lemma)"
+              ],
+              "missing_keywords": [
+                "luck",
+                "help",
+                "study",
+                "thank"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.2019,
+              "response_passed": true,
+              "latency_ms": 795.6256249453872
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 0.8333,
+          "avg_coverage_rate": 0.5,
+          "avg_latency_ms": 559.75,
+          "passed": false
+        },
+        {
+          "run_index": 3,
+          "turns": [
+            {
+              "turn_index": 1,
+              "user_message": "What programs do you offer at Chatbot system?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot has programs in Business, Tech, Health, and Social Sciences. All programs are accredited and internationally recognized. Which field interests you most?",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "accredited (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [],
+              "coverage_rate": 1.0,
+              "semantic_score": 0.0,
+              "response_passed": true,
+              "latency_ms": 476.93504206836224
+            },
+            {
+              "turn_index": 2,
+              "user_message": "What programs do you offer in the business field?",
+              "expected_intent": "course_inquiry",
+              "actual_intent": "course_inquiry",
+              "intent_match": true,
+              "response_text": "Chatbot offers 200+ programs including Business Administration, Computer Science, Psychology, Engineering, and more — available fully online or on-campus.",
+              "covered_keywords": [
+                "program (lemma)",
+                "business (lemma)",
+                "science (lemma)",
+                "chatbot (lemma)"
+              ],
+              "missing_keywords": [
+                "accredited"
+              ],
+              "coverage_rate": 0.8,
+              "semantic_score": 0.1884,
+              "response_passed": true,
+              "latency_ms": 444.7820831555873
+            },
+            {
+              "turn_index": 3,
+              "user_message": "Which business program would you recommend for a career in finance?",
+              "expected_intent": "academic_advice",
+              "actual_intent": "academic_advice",
+              "intent_match": true,
+              "response_text": "For a career in business and tech, I'd recommend our BSc Business Informatics or MSc Data Science — both are highly sought after by employers globally.",
+              "covered_keywords": [
+                "career (lemma)",
+                "recommend (lemma)"
+              ],
+              "missing_keywords": [
+                "program",
+                "demand",
+                "passion"
+              ],
+              "coverage_rate": 0.4,
+              "semantic_score": 0.1095,
+              "response_passed": true,
+              "latency_ms": 732.080833055079
+            },
+            {
+              "turn_index": 4,
+              "user_message": "How much does the Masters program cost per semester?",
+              "expected_intent": "tuition_inquiry",
+              "actual_intent": "tuition_inquiry",
+              "intent_match": true,
+              "response_text": "Tuition at Chatbot depends on your chosen program. Bachelor programs start from €6,390/year and Master programs from €7,560/year. Flexible payment plans are available!",
+              "covered_keywords": [
+                "tuition (lemma)",
+                "program (lemma)",
+                "payment (lemma)"
+              ],
+              "missing_keywords": [
+                "fee",
+                "semester"
+              ],
+              "coverage_rate": 0.6,
+              "semantic_score": 0.2726,
+              "response_passed": true,
+              "latency_ms": 618.6001671012491
+            },
+            {
+              "turn_index": 5,
+              "user_message": "How do I begin the enrollment at Chatbot?",
+              "expected_intent": "enrollment_inquiry",
+              "actual_intent": "enrollment_inquiry",
+              "intent_match": true,
+              "response_text": "To apply at Chatbot: 1) Choose your program, 2) Submit your application online, 3) Upload your documents. You can start enrollment year-round — no fixed intake dates!",
+              "covered_keywords": [
+                "apply (lemma)"
+              ],
+              "missing_keywords": [
+                "enroll",
+                "process",
+                "week",
+                "school"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.4163,
+              "response_passed": true,
+              "latency_ms": 242.89462505839765
+            },
+            {
+              "turn_index": 6,
+              "user_message": "Thanks so much! Goodbye!",
+              "expected_intent": "farewell",
+              "actual_intent": "farewell",
+              "intent_match": true,
+              "response_text": "Goodbye! Don't hesitate to contact us again if you have more questions.",
+              "covered_keywords": [
+                "goodbye (lemma)"
+              ],
+              "missing_keywords": [
+                "luck",
+                "help",
+                "study",
+                "thank"
+              ],
+              "coverage_rate": 0.2,
+              "semantic_score": 0.2019,
+              "response_passed": true,
+              "latency_ms": 474.42224994301796
+            }
+          ],
+          "intent_accuracy": 1.0,
+          "response_pass_rate": 1.0,
+          "avg_coverage_rate": 0.5333,
+          "avg_latency_ms": 498.29,
+          "passed": true
+        }
+      ],
+      "majority_passed": true,
+      "intent_accuracy": 1.0,
+      "response_pass_rate": 0.9444,
+      "avg_coverage_rate": 0.5444,
+      "avg_latency_ms": 696.86,
+      "failure_reasons": []
+    }
+  ]
+}
