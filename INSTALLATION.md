@@ -123,11 +123,16 @@ All CLI flags are optional — they fall back to values in `evaluator/.env`.
 
 If you prefer to run both the API and the evaluator simultaneously in isolated containers, you can use Docker Compose.
 
-The `docker-compose.yml` is configured to pull the pre-built image from GitHub Container Registry (make sure to replace the image path with your actual GitHub repository URL once uploaded).
+The `docker-compose.yml` is configured to build directly from the `main` branch of the GitHub repository. It will automatically duplicate the `.env.example` files into active `.env` files inside the running containers.
+
+Just download the `docker-compose.yml` file to any directory on your computer, and run:
 
 ```bash
-# Start the mock API and run the evaluator
-docker compose up
+# Pull from GitHub, build, and start the system
+docker compose up --build
 ```
 
-This will automatically pass `test_cases.json` to the evaluator container, run the tests against the API container (`http://api:8080`), and drop the resulting `report.json` right into your current directory via a volume mount!
+This will automatically:
+1. Clone the repository and build the environment.
+2. Boot the API.
+3. Boot the Evaluator container, run the tests against the API container (`http://api:8080`), and sink the resulting `report.json` right into your current local directory!
