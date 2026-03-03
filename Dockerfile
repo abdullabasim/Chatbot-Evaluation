@@ -1,6 +1,5 @@
-# ==========================================
+
 # Stage 1: Build & Install Dependencies
-# ==========================================
 FROM python:3.10-slim AS builder
 
 WORKDIR /app
@@ -22,9 +21,10 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
 RUN python -m spacy download en_core_web_sm
 
 
-# ==========================================
+
+
+
 # Stage 2: Minimal Runtime Environment
-# ==========================================
 FROM python:3.10-slim
 
 # Set environment variables to optimize Python runtime

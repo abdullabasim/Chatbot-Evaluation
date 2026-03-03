@@ -1,6 +1,6 @@
 # Chatbot Evaluation Pipeline
 
-This project is a backend evaluation system built for the Chatbot Senior Backend Engineer coding challenge.
+This project is a backend evaluation system built for the Chatbot Backend Engineer coding challenge.
 It consists of two independent components that work together: a **Mock Chatbot API** built with FastAPI
 and an **Evaluation Pipeline** that runs automated tests against it.
 
@@ -8,7 +8,7 @@ and an **Evaluation Pipeline** that runs automated tests against it.
 
 ## Project Overview
 
-The idea is straightforward — we simulate a real LLM-backed system chatbot, then evaluate it
+The idea is straightforward , we simulate a real LLM-backed system chatbot, then evaluate it
 programmatically across multiple conversations. The evaluator runs each test case several times,
 scores it using two validation stages (lemma matching + semantic similarity), and produces a
 structured JSON report.
@@ -17,7 +17,7 @@ structured JSON report.
 
 The mock API exists to simulate realistic chatbot behaviour, including intentional hallucinations
 (~5% rate) and variable response latency, without needing a real LLM. This lets the evaluator test
-its own robustness against an unpredictable backend — exactly what you'd face in production.
+its own robustness against an unpredictable backend , exactly what you'd face in production.
 
 ---
 
@@ -55,8 +55,8 @@ It mimics an LLM-backed system assistant for Chatbot International System of App
 | `student_support` | Academic help, student services |
 | `exam_inquiry` | Exam format, grading, pass marks |
 | `general_inquiry` | Anything that doesn't match a specific intent |
-| `greeting` | Conversational openers — intentionally last to lose ties |
-| `farewell` | Closing messages — intentionally last to lose ties |
+| `greeting` | Conversational openers , intentionally last to lose ties |
+| `farewell` | Closing messages , intentionally last to lose ties |
 
 ### Running the mock API
 
@@ -104,7 +104,7 @@ python -m evaluator.run_tests \
   --output report.json
 ```
 
-All flags are optional — defaults are read from `evaluator/.env`.
+All flags are optional , defaults are read from `evaluator/.env`.
 
 ### How it works
 
@@ -130,7 +130,7 @@ asyncio.gather ──► [testCase-001] ──► Run 1 ──► Turn 1 → Tur
 The semantic similarity model (`all-MiniLM-L6-v2`) is accelerated using **ONNX Runtime**.
 When the evaluation pipeline starts for the first time, it automatically exports the model
 from PyTorch weights to an ONNX format and saves it to `evaluator/onnx_models/`.
-On every subsequent run it loads the ONNX model directly — significantly faster than
+On every subsequent run it loads the ONNX model directly , significantly faster than
 reloading from PyTorch.
 
 ```
@@ -142,7 +142,7 @@ All subsequent runs:
   Loading ONNX model from evaluator/onnx_models/all-MiniLM-L6-v2...
 ```
 
-The `evaluator/onnx_models/` directory is gitignored — it is generated locally and not committed.
+The `evaluator/onnx_models/` directory is gitignored , it is generated locally and not committed.
 
 > [!TIP]
 > **Changing models:** If you change `EVAL_MODEL_NAME` in `.env` to a different model, the new model will automatically export to its own folder. If you want to force-rebuild the ONNX cache for the currently selected model, run the evaluator with the `--force-onnx-export` flag.
@@ -154,13 +154,13 @@ Each turn in a conversation is evaluated on two things independently:
 #### Intent matching
 
 The API's response includes an `intent` field. The evaluator compares it to `expected_intent`
-from the test case — it's a simple string match (case-insensitive). Either it matches or it doesn't.
+from the test case , it's a simple string match (case-insensitive). Either it matches or it doesn't.
 This is what `intent_match` is in the report.
 
 #### Keyword validation (Two-Stage)
 
 Each keyword in `expected_response_keywords` is checked against the chatbot's response text.
-The two stages run in order — Stage 2 only runs when Stage 1 fails for a specific keyword.
+The two stages run in order , Stage 2 only runs when Stage 1 fails for a specific keyword.
 
 **Stage 1 — spaCy lemma match**
 spaCy lemmatises every token in the response and the keyword itself, then checks if any of them match.
@@ -173,7 +173,7 @@ If Stage 1 matches: `semantic_score = 0.0` (Stage 2 is skipped), the keyword app
 **Stage 2 — Semantic similarity (runs only if Stage 1 failed)**
 The keyword and the full response are both encoded into vectors by `all-MiniLM-L6-v2` (via ONNX Runtime).
 Cosine similarity is computed between them. If the score is above `semantic_threshold`, the keyword is covered.
-This catches cases that Stage 1 misses — paraphrasing, synonyms, concept overlap:
+This catches cases that Stage 1 misses , paraphrasing, synonyms, concept overlap:
 - keyword `cost` in a response that says `pricing`
 - keyword `tuition` in a response about `fees` (different lemma, same concept)
 
@@ -238,7 +238,7 @@ dependency installation, and environment configuration.
 
 The most significant design decision in the validation pipeline was **not using an LLM for keyword validation**.
 
-An LLM (e.g. GPT-4 or a local model) could replace both stages — instead of lemma matching and
+An LLM (e.g. GPT-4 or a local model) could replace both stages , instead of lemma matching and
 embedding similarity, you'd prompt the LLM with the chatbot response and the keyword list and ask it
 to judge whether each concept is present. This would handle indirect references, negations, and
 contextual paraphrasing much better than either stage does today.
