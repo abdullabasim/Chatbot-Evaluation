@@ -441,6 +441,7 @@ def main() -> None:
 
     # Write the JSON report to disk
     output_path = Path(config.output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(
         report.model_dump_json(indent=2),
         encoding="utf-8",
