@@ -42,11 +42,11 @@ app = FastAPI(
     redoc_url="/redoc",
 )
 
-# CORS configuration: Restrict to internal/local origins
+# CORS configuration: Restrict to internal/local origins dynamically based on configured port
 origins = [
     "http://localhost",
-    "http://localhost:8080",
-    "http://api:8080",
+    f"http://localhost:{settings.port}",
+    f"http://api:{settings.port}",
 ]
 
 app.add_middleware(
