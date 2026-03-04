@@ -1,8 +1,9 @@
-version: '3.8'
+name: chatbot-evaluation
 
 services:
   # The Chatbot API running on port 8080
   api:
+    container_name: chatbot-api
     build: 
       context: https://github.com/abdullabasim/Chatbot-Evaluation.git#main
     ports:
@@ -12,6 +13,7 @@ services:
 
   # The Evaluator pipeline
   evaluator:
+    container_name: chatbot-evaluator
     build: 
       context: https://github.com/abdullabasim/Chatbot-Evaluation.git#main
     depends_on:
