@@ -1,4 +1,4 @@
-# Chatbot Evaluation Pipeline
+# Chatbot Evaluation System
 
 This project is a backend evaluation system built for the Chatbot Backend Engineer coding challenge.
 It consists of two independent components that work together: a **Mock Chatbot API** built with FastAPI
@@ -145,7 +145,7 @@ All subsequent runs:
 The `evaluator/onnx_models/` directory is gitignored , it is generated locally and not committed.
 
 > [!TIP]
-> **Changing models:** If you change `EVAL_MODEL_NAME` in `.env` or pass `--model-name <new_model>` to the CLI, the new model will automatically export to its own folder. If you want to force-rebuild the ONNX cache for the currently selected model, run the evaluator with the `--force-onnx-export` flag.
+> **Changing models:** If you change `EVAL_MODEL_NAME` in `.env` or pass `--model-name <new_model>` to the CLI, the evaluator will pull the new model from the Hugging Face Hub and automatically export it to its own folder. If you want to force-rebuild the ONNX cache for the currently selected model, run the evaluator with the `--force-onnx-export` flag.
 
 ### How each turn is scored
 
