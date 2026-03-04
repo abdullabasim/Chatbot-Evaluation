@@ -15,6 +15,7 @@ import logging
 
 import uvicorn
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from mock_api.core.config import settings
@@ -39,6 +40,21 @@ app = FastAPI(
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc",
+)
+
+# CORS configuration: Restrict to internal/local origins
+origins = [
+    "http://localhost",
+    "http://localhost:8080",
+    "http://api:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Route registration
