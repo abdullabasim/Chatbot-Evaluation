@@ -7,5 +7,5 @@ __pycache__/
 
 # Evaluation artifacts
 evaluator/onnx_models/
-report*.json
+
 .DS_Store
