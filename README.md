@@ -256,7 +256,7 @@ and introduce non-determinism into what should be a reproducible test. The two-s
 ## Limitations
 
 > [!WARNING]
-> - No real conversation state — each turn is evaluated independently in the mock
+> - No real conversation state, each turn is evaluated independently in the mock
 > - Keyword lists are hand-crafted; a production setup would use annotated golden references
 > - The embedding model and spaCy model downloads require internet access on the very first run
 
