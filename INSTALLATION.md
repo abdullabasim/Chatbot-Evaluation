@@ -146,9 +146,9 @@ All CLI flags are optional — they fall back to values in `evaluator/.env`.
 
 If you prefer to run both the API and the evaluator simultaneously in isolated containers, you can use Docker Compose.
 
-The `docker-compose.yml` is configured to build directly from the `main` branch of the GitHub repository. It will automatically duplicate the `.env.example` files into active `.env` files inside the running containers.
+The `docker-compose.yml` is configured to build directly from the GitHub repository. It will automatically duplicate the `.env.example` files into active `.env` files inside the running containers.
 
-Just download the `docker-compose.yml` file to any directory on your computer, and run:
+Just download `docker-compose.yml` and `Dockerfile` files to any directory on your computer, and run:
 
 ```bash
 # Pull from GitHub, build, and start the system
