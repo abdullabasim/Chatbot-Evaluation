@@ -145,7 +145,7 @@ All subsequent runs:
 The `evaluator/onnx_models/` directory is gitignored , it is generated locally and not committed.
 
 > [!TIP]
-> **Changing models:** If you change `EVAL_MODEL_NAME` in `.env` to a different model, the new model will automatically export to its own folder. If you want to force-rebuild the ONNX cache for the currently selected model, run the evaluator with the `--force-onnx-export` flag.
+> **Changing models:** If you change `EVAL_MODEL_NAME` in `.env` or pass `--model-name <new_model>` to the CLI, the new model will automatically export to its own folder. If you want to force-rebuild the ONNX cache for the currently selected model, run the evaluator with the `--force-onnx-export` flag.
 
 ### How each turn is scored
 
@@ -167,6 +167,9 @@ spaCy lemmatises every token in the response and the keyword itself, then checks
 This handles inflected forms without any neural model:
 - `fees` → lemma `fee` → matches keyword `fee`
 - `enrolling` → lemma `enroll` → matches keyword `enroll`
+
+> [!TIP]
+> **Multiple Languages:** By default, Stage 1 uses English (`en_core_web_sm`). If you are evaluating a chatbot in a different language, you can change the spaCy model using `EVAL_LANGUAGE` in `.env` or passing `--language <code>` to the CLI. For example, pass `--language de` for German, which will download and use `de_core_news_sm`, or `--language fr` for French (`fr_core_news_sm`).
 
 If Stage 1 matches: `semantic_score = 0.0` (Stage 2 is skipped), the keyword appears as `"fee (lemma)"` in the report.
 
