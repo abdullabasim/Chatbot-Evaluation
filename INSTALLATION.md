@@ -142,9 +142,9 @@ All CLI flags are optional — they fall back to values in `evaluator/.env`.
 
 ---
 
-## Docker Compose (optional)
+## Docker Installation (optional)
 
-If you prefer to run both the API and the evaluator simultaneously in isolated containers, you can use Docker Compose.
+If you prefer to run both the API and the evaluator simultaneously in isolated containers, you can use Docker.
 
 The `docker-compose.yml` is configured to build directly from the GitHub repository. It will automatically duplicate the `.env.example` files into active `.env` files inside the running containers.
 
