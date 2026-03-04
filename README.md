@@ -1,17 +1,10 @@
 # Chatbot Evaluation System
 
-This project is a backend evaluation system built for the Chatbot Backend Engineer coding challenge.
-It consists of two independent components that work together: a **Mock Chatbot API** built with FastAPI
-and an **Evaluation Pipeline** that runs automated tests against it.
+This repository provides a comprehensive, automated testing framework to evaluate the performance, accuracy, and resilience of LLM-backed chatbot APIs. 
 
----
-
-## Project Overview
-
-The idea is straightforward , we simulate a real LLM-backed system chatbot, then evaluate it
-programmatically across multiple conversations. The evaluator runs each test case several times,
-scores it using two validation stages (lemma matching + semantic similarity), and produces a
-structured JSON report.
+The architecture consists of two independent components that work together:
+1. **Mock Chatbot API (FastAPI):** A simulated educational assistant with variable latency and intentional hallucination rates for testing.
+2. **Evaluation Pipeline:** A highly concurrent CLI tool that runs structured conversation tests and scores the responses using two validation stages (spaCy lemma matching + ONNX-accelerated semantic similarity) to produce a structured JSON report.
 
 ### Why two components?
 
@@ -26,7 +19,7 @@ its own robustness against an unpredictable backend , exactly what you'd face in
 **Location:** `mock_api/`
 
 The mock API is a FastAPI service that exposes a single `POST /chat` endpoint.
-It mimics an LLM-backed system assistant for Chatbot International System of Applied Sciences.
+It mimics an LLM-backed educational assistant for a university.
 
 ### How it works
 
@@ -79,7 +72,7 @@ curl -X POST http://localhost:8080/chat \
 ```json
 {
   "intent": "tuition_inquiry",
-  "response": "Tuition fees at Chatbot depend on the program and study model. On average, fees range from €3,000 to €20,000 per year.",
+  "response": "Tuition fees depend on the program and study model. On average, fees range from €3,000 to €20,000 per year.",
   "confidence": 0.91
 }
 ```

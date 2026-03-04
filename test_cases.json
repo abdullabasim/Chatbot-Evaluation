@@ -4,7 +4,7 @@
     "conversation": [
       {
         "user_id": "user-001",
-        "message": "I want to know about tuition fees at Chatbot."
+        "message": "I want to know about tuition fees at your university."
       },
       {
         "user_id": "user-001",
@@ -37,7 +37,7 @@
     "conversation": [
       {
         "user_id": "user-002",
-        "message": "How do I enroll at Chatbot?"
+        "message": "How do I enroll at your university?"
       },
       {
         "user_id": "user-002",
@@ -82,15 +82,15 @@
     "conversation": [
       {
         "user_id": "user-003",
-        "message": "What Bachelor programs does Chatbot offer?"
+        "message": "What Bachelor programs does the university offer?"
       },
       {
         "user_id": "user-003",
-        "message": "What programs and courses can I study at Chatbot?"
+        "message": "What programs and courses can I study at your university?"
       },
       {
         "user_id": "user-003",
-        "message": "Are Chatbot programs offered in an online format?"
+        "message": "Are the university programs offered in an online format?"
       }
     ],
     "expected_intents": [
@@ -127,7 +127,7 @@
     "conversation": [
       {
         "user_id": "user-004",
-        "message": "When does the winter semester start at Chatbot?"
+        "message": "When does the winter semester start at your university?"
       },
       {
         "user_id": "user-004",
@@ -160,7 +160,7 @@
     "conversation": [
       {
         "user_id": "user-005",
-        "message": "Are there any scholarships at Chatbot?"
+        "message": "Are there any scholarships at your university?"
       },
       {
         "user_id": "user-005",
@@ -168,7 +168,7 @@
       },
       {
         "user_id": "user-005",
-        "message": "How do I apply for financial support at Chatbot?"
+        "message": "How do I apply for financial support at your university?"
       }
     ],
     "expected_intents": [
@@ -205,7 +205,7 @@
     "conversation": [
       {
         "user_id": "user-006",
-        "message": "How are exams structured at Chatbot?"
+        "message": "How are exams structured at your university?"
       },
       {
         "user_id": "user-006",
@@ -430,7 +430,7 @@
     "conversation": [
       {
         "user_id": "user-011",
-        "message": "Is there student counseling available at Chatbot?"
+        "message": "Is there student counseling available at your university?"
       },
       {
         "user_id": "user-011",
@@ -573,7 +573,7 @@
       },
       {
         "user_id": "user-014",
-        "message": "How are exam grades calculated at Chatbot?"
+        "message": "How are exam grades calculated at your university?"
       }
     ],
     "expected_intents": [
@@ -610,7 +610,7 @@
     "conversation": [
       {
         "user_id": "user-015",
-        "message": "What programs do you offer at Chatbot system?"
+        "message": "What programs do you offer at your university?"
       },
       {
         "user_id": "user-015",
@@ -626,7 +626,7 @@
       },
       {
         "user_id": "user-015",
-        "message": "How do I begin the enrollment at Chatbot?"
+        "message": "How do I begin the enrollment at your university?"
       },
       {
         "user_id": "user-015",
