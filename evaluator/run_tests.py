@@ -313,7 +313,7 @@ def _build_parser() -> argparse.ArgumentParser:
     # Build the argument parser. All flags are optional and fall back to .env.
     parser = argparse.ArgumentParser(
         prog="run_tests.py",
-        description="Automated Chatbot Evaluation Pipeline",
+        description="Automated Chatbot Evaluation System",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
